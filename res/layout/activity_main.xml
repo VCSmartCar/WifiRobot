@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mic"
+    tools:context=".MainActivity" >
+
+    
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <Button
+		        android:id="@+id/button_dhmm"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="普通话识别" />
+
+            <Button
+                android:id="@+id/button_dtw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="方言识别" />
+            
+        </LinearLayout>
+
+        
+
+    <TextView
+        android:id="@+id/textView_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <Button
+        android:id="@+id/button_sample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="0dp"
+        android:text="方言样本采集" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+            
+        <Button
+	        android:id="@+id/button_qian"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="录前进" />
+        
+        <Button
+	        android:id="@+id/button_hou"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="录后退" />
+        
+        <Button
+	        android:id="@+id/button_zuo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="录左转" />
+
+        <Button
+	        android:id="@+id/button_you"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="录右转" /> 
+	                       
+        <Button
+	        android:id="@+id/button_ting"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="录暂停" />
+    </LinearLayout>
+</LinearLayout>
+
+</RelativeLayout>

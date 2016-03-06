@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start"
+    tools:context=".MainActivity" >
+
+    <elechen.android.wifirobot.control.MySurfaceView
+        android:id="@+id/mySurfaceView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageButton
+        android:id="@+id/imageButtonLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/imageButtonDown"
+        android:src="@drawable/left" />
+
+    <ImageButton
+        android:id="@+id/imageButtonUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonDown"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="68dp"
+        android:src="@drawable/up" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButtonUp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/down" />
+
+    <ImageButton
+        android:id="@+id/imageButtonRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageButtonDown"
+        android:layout_toRightOf="@+id/imageButtonDown"
+        android:src="@drawable/right" />
+
+
+
+    <ImageButton
+        android:id="@+id/imageButtonExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/exit" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/play" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="操作">
+    <RadioButton
+        android:id="@+id/radioButtonHandCtrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手控" />
+
+    <RadioButton
+        android:id="@+id/radioButtonVoiceCtrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageButtonPlay"
+        android:text="声控" />
+
+    <RadioButton
+        android:id="@+id/radioButtonGravityCtrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButtonVoiceCtrl"
+        android:text="重力" />
+   </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarSpeed"
+        android:layout_toRightOf="@+id/imageButtonRight"
+        android:text="速度条" />
+
+    <SeekBar
+        android:id="@+id/seekBarCameraDirction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1" />
+    
+        <SeekBar
+        android:id="@+id/seekBarSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageButtonUp"
+        android:layout_toRightOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageButtonUp"
+        android:layout_toRightOf="@+id/imageButtonRight"
+        android:text="摄像头" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOpenVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="30dp"
+        android:text="视频" />
+
+</RelativeLayout>
